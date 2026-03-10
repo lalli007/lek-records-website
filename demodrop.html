@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Demodrop</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="demodrop">
+    <header class="topbar">
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="artists.html">Artists</a>
+        <a href="catalogue.html">Catalogue</a>
+        <a href="#shop">Shop</a>
+        <a href="demodrop.html" aria-current="page">Demodrop</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main class="page">
+      <section class="demodrop-card" aria-labelledby="demodrop-title">
+        <p class="eyebrow">Demodrop</p>
+        <h1 id="demodrop-title">Signal intake</h1>
+        <p class="subhead">Short text only. No uploads, no links.</p>
+        <div class="demodrop-meta" aria-hidden="true">
+          <span>Queue: open</span>
+          <span>Format: plain text</span>
+        </div>
+
+        <form class="demodrop-form" action="#" method="post">
+          <label for="artist-name">Artist name</label>
+          <input id="artist-name" name="artist-name" type="text" autocomplete="name" required />
+
+          <div class="message-block">
+            <div class="message-input">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="6" maxlength="1200" required></textarea>
+            </div>
+            <div class="message-aside" aria-hidden="true">
+              <p>Plain text only</p>
+              <p>Max 1200 chars</p>
+            </div>
+          </div>
+
+          <button type="submit" class="button">Send message</button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
