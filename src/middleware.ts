@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 
-const USERNAME = "Shitsfucked";
-const PASSWORD = "centipede";
+const USERNAME = process.env.AUTH_USERNAME ?? "";
+const PASSWORD = process.env.AUTH_PASSWORD ?? "";
 
 export function middleware(req: NextRequest) {
   const auth = req.headers.get("authorization");
