@@ -126,15 +126,16 @@ body {
 
 .nav {
   display: flex;
-  flex-wrap: wrap;
-  gap: 28px;
+  flex-wrap: nowrap;
+  gap: clamp(8px, 2vw, 28px);
   justify-content: flex-start;
   align-items: center;
   text-transform: uppercase;
-  letter-spacing: 0.18em;
-  font-size: 14px;
+  letter-spacing: clamp(0.06em, 0.5vw, 0.18em);
+  font-size: clamp(9px, 1.4vw, 14px);
   font-weight: 500;
   font-family: "Neuropolitical", "Space Grotesk", sans-serif;
+  white-space: nowrap;
 }
 
 .nav a {
@@ -173,7 +174,7 @@ main {
 }
 
 .nav-logo {
-  height: 80px;
+  height: clamp(35px, 7vw, 80px);
   width: auto;
 }
 
@@ -780,9 +781,13 @@ main {
   }
 
   .nav {
-    gap: 18px;
-    letter-spacing: 0.14em;
-    font-size: 12px;
+    gap: 12px;
+    letter-spacing: 0.1em;
+    font-size: 11px;
+  }
+
+  .nav-logo {
+    height: 45px;
   }
 
   main {
@@ -809,11 +814,13 @@ main {
   }
 
   .artist-card {
-    grid-template-columns: 1fr;
+    grid-template-columns: 80px 1fr;
+    gap: 14px;
   }
 
   .artist-photo {
-    height: 200px;
+    height: 80px;
+    background-size: cover;
   }
 
   .catalogue-header {

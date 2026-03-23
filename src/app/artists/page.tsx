@@ -15,7 +15,15 @@ export default function Artists() {
             />
             <div className="artist-info">
               <h2>Gabriel Patås</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <p>
+                Gabriel Patås er en norsk produsent, DJ og live-musiker som rir
+                knivseggen mellom ekstatisk eufori og stoisk melankoli. Han holder
+                residency på Kafe Hærverk i Oslo og grunnla Lek.Rec i 2022. Han har
+                tidligere gitt ut musikk på label som Aedi Records, Efja og Mind
+                Controlled Rectifier. Som produsent sier han selv at han tar
+                inspirasjon fra den rike klubbmusikkhistorien, med en ekstra
+                forkjærlighet for å blande dub med dagens eksperimentelle lyder.
+              </p>
             </div>
           </article>
 
@@ -48,7 +56,10 @@ export default function Artists() {
             />
             <div className="artist-info">
               <h2>Lárus Sigurvin</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <p>
+                Lárus er en elektronisk musikkprodusent, komponist, DJ og
+                live-utøver, samt grunnlegger av plateselskapet Lek.Rec.
+              </p>
             </div>
           </article>
         </div>

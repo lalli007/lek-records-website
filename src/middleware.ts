@@ -1,7 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 
-const USERNAME = process.env.AUTH_USERNAME ?? "Shitsfucked";
-const PASSWORD = process.env.AUTH_PASSWORD ?? "centipede";
+const PASSWORD = process.env.AUTH_PASSWORD ?? "lek2026";
 
 export function middleware(req: NextRequest) {
   const auth = req.headers.get("authorization");
@@ -11,9 +10,8 @@ export function middleware(req: NextRequest) {
     if (scheme === "Basic" && encoded) {
       const decoded = atob(encoded);
       const colonIndex = decoded.indexOf(":");
-      const user = decoded.substring(0, colonIndex).trim();
       const pass = decoded.substring(colonIndex + 1).trim();
-      if (user === USERNAME.trim() && pass === PASSWORD.trim()) {
+      if (pass === PASSWORD.trim()) {
         return NextResponse.next();
       }
     }
