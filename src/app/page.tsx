@@ -8,7 +8,13 @@ export default function Home() {
           alt="Vinyl release"
           className="vinyl-hero"
         />
-        <a className="order-link" href="/catalogue">Order here</a>
+        <a className="order-link" href="/catalogue">Order vinyl / digital here</a>
+        <ul className="track-list hero-tracks">
+          <li><button className="track-chip" type="button">▶ Kim Dürbeck - Deployer</button></li>
+          <li><button className="track-chip" type="button">▶ Woody Mcbride DJ ESP - Shits fucked</button></li>
+          <li><button className="track-chip" type="button">▶ Lárus Sigurvin - Orientalism</button></li>
+          <li><button className="track-chip" type="button">▶ Patås - Stupid Junky Music</button></li>
+        </ul>
       </main>
 
       <aside className="shipping-inline" hidden>
