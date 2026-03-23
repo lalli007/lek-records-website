@@ -163,23 +163,41 @@ main {
   flex-direction: column;
   gap: 18px;
   padding: 120px 48px 80px;
+  position: relative;
 }
 
-.logo-wrap {
+.nav-home {
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 8px;
 }
 
-.logo,
-.logo-canvas {
-  width: min(60vw, 360px);
+.nav-logo {
+  height: 80px;
+  width: auto;
+}
+
+.vinyl-hero {
+  max-width: min(70vw, 500px);
   height: auto;
   display: block;
 }
 
 .logo-canvas {
   cursor: pointer;
+}
+
+.order-link {
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.order-link:hover,
+.order-link:focus-visible {
+  color: var(--ink);
 }
 
 .text-us {
@@ -338,18 +356,18 @@ main {
 }
 
 .artists {
-  width: min(1100px, 100%);
+  width: min(800px, 100%);
   margin: 0 auto;
 }
 
 .artists-header {
-  margin-bottom: 36px;
+  margin-bottom: 28px;
 }
 
 .artist-grid {
   display: grid;
-  gap: 24px;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 32px;
+  grid-template-columns: 1fr;
   align-items: start;
 }
 
@@ -357,19 +375,18 @@ main {
   background: transparent;
   border: none;
   border-radius: 0;
-  padding: 16px;
+  padding: 0;
   display: grid;
-  gap: 10px;
-  position: relative;
-  overflow: hidden;
-  align-content: start;
+  grid-template-columns: 180px 1fr;
+  gap: 20px;
+  align-items: start;
 }
 
 .artist-card h2,
 .artist-card p {
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .artist-card::before {
@@ -378,20 +395,27 @@ main {
 
 .artist-card h2 {
   margin: 0;
-  font-size: 18px;
+  font-size: 15px;
 }
 
 .artist-card p {
   margin: 0;
   color: var(--muted);
-  font-size: 14px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.artist-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .artist-photo {
   border-radius: 0;
-  width: 90%;
-  margin: 0 auto;
-  height: clamp(240px, 36vw, 360px);
+  width: 100%;
+  margin: 0;
+  height: 180px;
   background-size: cover;
   background-position: center;
   border: none;
@@ -416,7 +440,7 @@ main {
 }
 
 .catalogue-page {
-  background: #d7d6d1;
+  background: inherit;
 }
 
 .catalogue-header {
@@ -435,7 +459,7 @@ main {
 }
 
 .release-card {
-  background: rgba(255, 255, 255, 0.78);
+  background: transparent;
   border: 1px solid rgba(11, 11, 11, 0.08);
   border-radius: 18px;
   padding: 18px;
@@ -448,6 +472,7 @@ main {
   width: 100%;
   aspect-ratio: 1 / 1;
   border-radius: 12px;
+  object-fit: cover;
   border: 1px solid rgba(11, 11, 11, 0.12);
   background-size: cover;
   background-position: center;
@@ -456,7 +481,7 @@ main {
 .release-card--list {
   grid-template-columns: 140px minmax(0, 1fr) 140px;
   align-items: start;
-  background: #d7d6d1;
+  background: transparent;
   border: 1px solid rgba(11, 11, 11, 0.2);
   border-radius: 4px;
   box-shadow: none;
@@ -774,6 +799,14 @@ main {
 
   .artists-header {
     margin-bottom: 28px;
+  }
+
+  .artist-card {
+    grid-template-columns: 1fr;
+  }
+
+  .artist-photo {
+    height: 200px;
   }
 
   .catalogue-header {

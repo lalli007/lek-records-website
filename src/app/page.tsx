@@ -1,27 +1,17 @@
-import LogoCanvas from "@/components/LogoCanvas";
-
 export default function Home() {
   return (
     <>
       <main id="timeline">
-        <div className="logo-wrap">
-          <LogoCanvas />
-          <noscript>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/LEKREC.svg" alt="LEKREC logo" className="logo" />
-          </noscript>
-        </div>
-        <a
-          className="text-us"
-          href="https://wa.me/4795444766"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          WhatsApp
-        </a>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/vinyl-release.png"
+          alt="Vinyl release"
+          className="vinyl-hero"
+        />
+        <a className="order-link" href="/catalogue">Order here</a>
       </main>
 
-      <aside className="shipping-inline">
+      <aside className="shipping-inline" hidden>
         <details className="shipping-details">
           <summary>xx lek rec shipping xx</summary>
           <div className="shipping-content">

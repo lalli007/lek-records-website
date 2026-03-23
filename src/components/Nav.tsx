@@ -8,6 +8,10 @@ export default function Nav() {
 
   return (
     <nav className="nav" aria-label="Primary">
+      <Link href="/" className="nav-home">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="/LEKREC.svg" alt="LEKREC" className="nav-logo" />
+      </Link>
       <Link href="/" aria-current={pathname === "/" ? "page" : undefined}>
         Timeline
       </Link>

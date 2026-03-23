@@ -173,10 +173,11 @@ export default function Catalogue() {
           <div className="release-grid release-grid--list">
             {releases.map((r) => (
               <article key={r.title} className="release-card release-card--list">
-                <div
-                  className={`release-cover ${r.cover}`}
-                  role="img"
-                  aria-label={`${r.title} cover`}
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  className="release-cover"
+                  src="/vinyl-release.png"
+                  alt={`${r.title} cover`}
                 />
                 <div className="release-body">
                   <div className="release-top">
@@ -214,17 +215,6 @@ export default function Catalogue() {
                         ))}
                       </ul>
                     )
-                  )}
-                </div>
-                <div className="release-actions">
-                  <div className="release-formats">
-                    <button className="format-chip" type="button">MP3</button>
-                    {r.vinyl && (
-                      <button className="format-chip" type="button">12&quot;</button>
-                    )}
-                  </div>
-                  {r.price && (
-                    <button className="price-pill" type="button">{r.price}</button>
                   )}
                 </div>
               </article>
