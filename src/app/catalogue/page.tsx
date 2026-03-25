@@ -164,59 +164,58 @@ export default function Catalogue() {
   return (
     <div className="catalogue-page" style={{ flex: 1 }}>
       <main className="page">
-        <section className="catalogue">
-          <header className="catalogue-header">
-            <p className="eyebrow">Catalogue</p>
-            <h1>All releases</h1>
-          </header>
+        <section className="swiss-catalogue">
+          <div className="swiss-catalogue-header">
+            <span className="swiss-index">Archive</span>
+            <h1 className="swiss-title">Catalogue</h1>
+            <p className="swiss-count">
+              {String(releases.length).padStart(2, "0")} releases
+            </p>
+          </div>
 
-          <div className="release-grid release-grid--list">
-            {releases.map((r) => (
-              <article key={r.title} className="release-card release-card--list">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  className="release-cover"
-                  src="/vinyl-release.png"
-                  alt={`${r.title} cover`}
-                />
-                <div className="release-body">
-                  <div className="release-top">
-                    <span className="release-code">{r.code ?? r.meta}</span>
-                    <span className="release-top-meta">{r.code ? r.meta : ""}</span>
+          <div className="swiss-catalogue-columns">
+            <div className="swiss-col-label">Artist / Title</div>
+            <div className="swiss-col-label">Format</div>
+          </div>
+
+          <div className="swiss-release-list">
+            {releases.map((r, i) => (
+              <article key={r.title} className="swiss-release-row">
+                <div className="swiss-release-main">
+                  <div className="swiss-release-info">
+                    <h2 className="swiss-release-title">
+                      <span className="swiss-release-artist">{r.artist}</span>
+                      {r.title}
+                    </h2>
+                    <p className="swiss-release-desc">{r.desc}</p>
                   </div>
-                  <h2>
-                    <span className="release-artist">{r.artist}:</span> {r.title}
-                  </h2>
-                  <p className="release-desc">{r.desc}</p>
+
                   {r.tracks.length > 0 && (
-                    r.tracks.length > 5 ? (
-                      <div className="track-list-two-col" aria-label="Tracks">
-                        <ul className="track-list">
-                          {r.tracks.slice(0, Math.ceil(r.tracks.length / 2)).map((t) => (
-                            <li key={t}>
-                              <button className="track-chip" type="button">▶ {t}</button>
-                            </li>
-                          ))}
-                        </ul>
-                        <ul className="track-list">
-                          {r.tracks.slice(Math.ceil(r.tracks.length / 2)).map((t) => (
-                            <li key={t}>
-                              <button className="track-chip" type="button">▶ {t}</button>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    ) : (
-                      <ul className="track-list" aria-label="Tracks">
-                        {r.tracks.map((t) => (
-                          <li key={t}>
-                            <button className="track-chip" type="button">▶ {t}</button>
-                          </li>
-                        ))}
-                      </ul>
-                    )
+                    <div className="swiss-tracklist">
+                      {r.tracks.map((t, ti) => (
+                        <button key={t} className="swiss-track" type="button">
+                          <span className="swiss-track-num">
+                            {String(ti + 1).padStart(2, "0")}
+                          </span>
+                          <span className="swiss-track-title">{t}</span>
+                          <span className="swiss-track-play">&#9654;</span>
+                        </button>
+                      ))}
+                    </div>
                   )}
                 </div>
+
+                <div className="swiss-release-format">
+                  <span>{r.meta}</span>
+                  {r.vinyl && <span className="swiss-vinyl-badge">Vinyl</span>}
+                  <a href="#" target="_blank" rel="noopener noreferrer" className="swiss-bandcamp-link" aria-label={`${r.title} on Bandcamp`}>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M0 18.75l7.437-13.5H24l-7.438 13.5z"/>
+                    </svg>
+                    Bandcamp
+                  </a>
+                </div>
+
               </article>
             ))}
           </div>
