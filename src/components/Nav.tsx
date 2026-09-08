@@ -12,19 +12,11 @@ export default function Nav() {
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src="/LEKREC.svg" alt="LEKREC" className="nav-logo" />
       </Link>
-      <Link href="/" aria-current={pathname === "/" ? "page" : undefined}>
-        Timeline
-      </Link>
-      <Link href="/artists" aria-current={pathname === "/artists" ? "page" : undefined}>
-        Artists
-      </Link>
-      <Link href="/catalogue" aria-current={pathname === "/catalogue" ? "page" : undefined}>
-        Catalogue
-      </Link>
-<Link href="/demodrop" aria-current={pathname === "/demodrop" ? "page" : undefined}>
-        Demodrop
-      </Link>
-      <Link href="/contact" aria-current={pathname === "/contact" ? "page" : undefined}>
+      <Link
+        href="/contact"
+        className="nav-contact"
+        aria-current={pathname === "/contact" ? "page" : undefined}
+      >
         Contact
       </Link>
     </nav>

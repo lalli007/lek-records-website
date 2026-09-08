@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap");
-
 @font-face {
   font-family: "Neuropolitical";
   src: url("/fonts/Neuropolitical Rg.otf") format("opentype");
@@ -23,7 +21,7 @@ body {
   margin: 0;
   min-height: 100vh;
   color: var(--ink);
-  font-family: "Space Grotesk", "Segoe UI", sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   display: flex;
   flex-direction: column;
   background:
@@ -36,7 +34,7 @@ body {
   top: 120px;
   right: 24px;
   width: min(220px, 70vw);
-  font-family: "Space Mono", "SFMono-Regular", ui-monospace, monospace;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 11px;
   line-height: 1.3;
   z-index: 20;
@@ -134,7 +132,7 @@ body {
   letter-spacing: clamp(0.06em, 0.5vw, 0.18em);
   font-size: clamp(9px, 1.4vw, 14px);
   font-weight: 500;
-  font-family: "Neuropolitical", "Space Grotesk", sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   white-space: nowrap;
 }
 
@@ -167,6 +165,12 @@ main {
   position: relative;
 }
 
+.home-main {
+  align-items: stretch;
+  justify-content: flex-start;
+  padding: 8px 32px 80px;
+}
+
 .nav-home {
   display: flex;
   align-items: center;
@@ -174,8 +178,12 @@ main {
 }
 
 .nav-logo {
-  height: clamp(35px, 7vw, 80px);
+  height: clamp(70px, 14vw, 160px);
   width: auto;
+}
+
+.nav-contact {
+  margin-left: auto;
 }
 
 .vinyl-hero {
@@ -197,7 +205,7 @@ main {
 
 .coming-soon {
   margin: 0;
-  font-family: "Space Mono", monospace;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.22em;
@@ -297,7 +305,7 @@ main {
   border-radius: 6px;
   border: 1px solid rgba(11, 11, 11, 0.35);
   background: rgba(255, 255, 255, 0.6);
-  font-family: "Space Mono", "SFMono-Regular", ui-monospace, monospace;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   letter-spacing: 0.02em;
 }
@@ -349,7 +357,7 @@ main {
   letter-spacing: 0.2em;
   font-size: 10px;
   color: var(--muted);
-  font-family: "Space Mono", "SFMono-Regular", ui-monospace, monospace;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .message-aside p {
@@ -374,7 +382,7 @@ main {
 }
 
 .swiss-index {
-  font-family: "Space Mono", monospace;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 0.2em;
@@ -383,7 +391,7 @@ main {
 
 .swiss-title {
   margin: 0;
-  font-family: "Neuropolitical", "Space Grotesk", sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: clamp(32px, 5vw, 48px);
   font-weight: 500;
   text-transform: uppercase;
@@ -393,7 +401,7 @@ main {
 
 .swiss-count {
   margin: 0;
-  font-family: "Space Mono", monospace;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.15em;
@@ -415,7 +423,7 @@ main {
 }
 
 .swiss-artist-number {
-  font-family: "Space Mono", monospace;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 42px;
   font-weight: 700;
   line-height: 1;
@@ -453,7 +461,7 @@ main {
 }
 
 .swiss-artist-details {
-  font-family: "Space Mono", monospace;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.18em;
@@ -541,7 +549,7 @@ main {
   gap: 0 24px;
   padding: 12px 0;
   border-bottom: 1px solid rgba(11, 11, 11, 0.15);
-  font-family: "Space Mono", monospace;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 0.2em;
@@ -571,7 +579,7 @@ main {
 }
 
 .swiss-release-number {
-  font-family: "Space Mono", monospace;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 36px;
   font-weight: 700;
   line-height: 1;
@@ -601,7 +609,7 @@ main {
 
 .swiss-release-artist {
   display: block;
-  font-family: "Space Mono", monospace;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 11px;
   font-weight: 400;
   text-transform: uppercase;
@@ -619,7 +627,7 @@ main {
 }
 
 .swiss-release-format {
-  font-family: "Space Mono", monospace;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.12em;
@@ -634,7 +642,7 @@ main {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-family: "Space Mono", monospace;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 0.15em;
@@ -660,7 +668,7 @@ main {
 }
 
 .swiss-release-price {
-  font-family: "Space Mono", monospace;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-weight: 700;
   text-align: right;
@@ -681,7 +689,7 @@ main {
   background: transparent;
   padding: 6px 0;
   cursor: pointer;
-  font-family: "Space Mono", monospace;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -721,7 +729,7 @@ main {
   display: grid;
   gap: 6px;
   border-top: 1px solid rgba(11, 11, 11, 0.2);
-  font-family: "Space Mono", "SFMono-Regular", ui-monospace, monospace;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -832,7 +840,7 @@ main {
 .tracklist {
   display: grid;
   gap: 10px;
-  font-family: "Space Mono", "SFMono-Regular", ui-monospace, monospace;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 12px;
   color: var(--muted);
   text-transform: uppercase;
@@ -1038,5 +1046,225 @@ main {
 
   .swiss-tracklist {
     grid-template-columns: 1fr;
+  }
+}
+
+
+/* ── Release index — homepage archive listing ── */
+
+.release-index {
+  width: 100%;
+  margin: 0 0 80px;
+}
+
+.release-index-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 32px;
+  flex-wrap: wrap;
+  padding: 0 0 20px;
+  border-top: 2px solid var(--ink);
+  padding-top: 14px;
+}
+
+.release-index-filter,
+.release-index-email {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.release-index-filter span,
+.release-index-email label {
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: var(--muted);
+}
+
+.release-index-filter select {
+  appearance: none;
+  border: 1px solid var(--ink);
+  border-radius: 6px;
+  background: var(--ink);
+  padding: 8px 16px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: var(--bg-2);
+  cursor: pointer;
+}
+
+.release-index-filter select:hover {
+  background: transparent;
+  color: var(--ink);
+}
+
+.release-index-filter select:focus-visible {
+  outline: 2px solid var(--muted);
+  outline-offset: 2px;
+}
+
+.release-index-email input:focus-visible {
+  outline: none;
+  border-bottom-color: var(--muted);
+}
+
+.release-index-email {
+  align-items: center;
+  gap: 12px;
+}
+
+.release-index-email input {
+  border: none;
+  border-bottom: 1px solid var(--ink);
+  background: transparent;
+  padding: 0 0 4px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--ink);
+  width: 200px;
+}
+
+.release-index-email input::placeholder {
+  color: rgba(11, 11, 11, 0.35);
+}
+
+.release-index-email button {
+  appearance: none;
+  border: 1px solid var(--ink);
+  border-radius: 6px;
+  background: var(--ink);
+  padding: 8px 16px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: var(--bg-2);
+  cursor: pointer;
+}
+
+.release-index-email button:hover,
+.release-index-email button:focus-visible {
+  background: transparent;
+  color: var(--ink);
+}
+
+.release-index-columns {
+  display: grid;
+  grid-template-columns: 200px 1fr 140px 64px;
+  gap: 0 24px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--ink);
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: var(--muted);
+}
+
+.release-index-columns span:nth-child(2) {
+  text-align: center;
+}
+
+.release-index-table {
+  display: grid;
+}
+
+.release-index-row {
+  display: grid;
+  grid-template-columns: 200px 1fr 140px 64px;
+  gap: 0 24px;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(11, 11, 11, 0.12);
+}
+
+.release-index-artist {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: var(--muted);
+  min-width: 0;
+}
+
+.release-index-title {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.3;
+  text-align: center;
+  min-width: 0;
+}
+
+.release-index-meta {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: var(--muted);
+  align-self: center;
+}
+
+.release-index-buy {
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: var(--ink);
+  text-decoration: none;
+  align-self: center;
+  justify-self: end;
+  border-bottom: 1px solid var(--ink);
+  padding-bottom: 1px;
+}
+
+.release-index-buy:hover,
+.release-index-buy:focus-visible {
+  color: var(--muted);
+  border-bottom-color: var(--muted);
+}
+
+@media (max-width: 720px) {
+  .release-index-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .release-index-email input {
+    width: 160px;
+  }
+
+  .release-index-columns {
+    display: none;
+  }
+
+  .release-index-row {
+    grid-template-columns: 1fr 56px;
+    grid-template-areas:
+      "artist buy"
+      "title title";
+    row-gap: 2px;
+  }
+
+  .release-index-artist {
+    grid-area: artist;
+  }
+
+  .release-index-title {
+    grid-area: title;
+    text-align: left;
+  }
+
+  .release-index-buy {
+    grid-area: buy;
+  }
+
+  .release-index-meta {
+    display: none;
   }
 }

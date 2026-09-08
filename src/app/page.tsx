@@ -1,21 +1,10 @@
+import ReleaseIndex from "@/components/ReleaseIndex";
+
 export default function Home() {
   return (
     <>
-      <main id="timeline">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="/vinyl-release.png"
-          alt="Vinyl release"
-          className="vinyl-hero"
-        />
-        <p className="coming-soon">Coming soon</p>
-        <a className="order-link" href="/catalogue">Pre-order vinyl / digital here</a>
-        <ul className="track-list hero-tracks">
-          <li><button className="track-chip" type="button">▶ Kim Dürbeck - Deployer</button></li>
-          <li><button className="track-chip" type="button">▶ Woody Mcbride DJ ESP - Shits fucked</button></li>
-          <li><button className="track-chip" type="button">▶ Lárus Sigurvin - Orientalism</button></li>
-          <li><button className="track-chip" type="button">▶ Patås - Stupid Junky Music</button></li>
-        </ul>
+      <main id="timeline" className="home-main">
+        <ReleaseIndex />
       </main>
 
       <aside className="shipping-inline" hidden>
