@@ -1268,3 +1268,148 @@ main {
     display: none;
   }
 }
+
+/* ── Booking one-pager (unlisted, direct-link only) ── */
+
+.booking-page {
+  justify-content: flex-start;
+  padding-top: 64px;
+}
+
+.booking-card {
+  width: min(720px, 100%);
+  margin: 0 auto;
+}
+
+.booking-wordmark {
+  margin: 0 0 40px;
+  font-size: clamp(32px, 6vw, 48px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.booking-top {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 28px;
+  align-items: start;
+  padding-bottom: 32px;
+  border-bottom: 2px solid var(--ink);
+}
+
+.booking-photo {
+  width: 200px;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(11, 11, 11, 0.06);
+}
+
+.booking-intro {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.booking-name {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.booking-role {
+  margin: 0;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--muted);
+}
+
+.booking-divider {
+  color: rgba(11, 11, 11, 0.3);
+}
+
+.booking-bio {
+  margin: 8px 0 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.booking-section {
+  padding: 28px 0;
+  border-bottom: 1px solid rgba(11, 11, 11, 0.15);
+}
+
+.booking-section-title {
+  margin: 0 0 14px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--muted);
+}
+
+.booking-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.booking-list a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.booking-contact-note {
+  margin: 0 0 16px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.booking-contact-grid {
+  margin: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.booking-contact-row {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 16px;
+  font-size: 14px;
+}
+
+.booking-contact-row dt {
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 11px;
+  align-self: center;
+}
+
+.booking-contact-row dd {
+  margin: 0;
+}
+
+@media (max-width: 560px) {
+  .booking-top {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-photo {
+    width: 140px;
+    height: 140px;
+  }
+
+  .booking-contact-row {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+}
