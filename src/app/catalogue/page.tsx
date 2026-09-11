@@ -53,7 +53,7 @@ export default function Catalogue() {
                 <div className="swiss-release-format">
                   <span>{r.meta}</span>
                   {r.vinyl && <span className="swiss-vinyl-badge">Vinyl</span>}
-                  <a href="#" target="_blank" rel="noopener noreferrer" className="swiss-bandcamp-link" aria-label={`${r.title} on Bandcamp`}>
+                  <a href={r.link ?? "https://lekrecords.bandcamp.com/"} target="_blank" rel="noopener noreferrer" className="swiss-bandcamp-link" aria-label={`${r.title} on Bandcamp`}>
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M0 18.75l7.437-13.5H24l-7.438 13.5z"/>
                     </svg>

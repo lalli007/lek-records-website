@@ -10,10 +10,10 @@ export default function Contact() {
       <section style={{ textAlign: "center" }}>
         <p className="eyebrow">Contact</p>
         <a
-          href="mailto:post@lek.rec"
+          href="mailto:lekrec@proton.me"
           style={{ fontSize: "14px", letterSpacing: "0.08em", color: "var(--muted)", textDecoration: "none", fontFamily: "'Space Mono', monospace", marginTop: "24px", display: "inline-block" }}
         >
-          post@lek.rec
+          lekrec@proton.me
         </a>
       </section>
     </main>
