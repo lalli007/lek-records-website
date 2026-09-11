@@ -12,8 +12,29 @@ function splitArtists(artist: string): string[] {
     .filter(Boolean);
 }
 
+type SubscribeStatus = "idle" | "loading" | "success" | "error";
+
 export default function ReleaseIndex() {
   const [artist, setArtist] = useState("all");
+  const [email, setEmail] = useState("");
+  const [status, setStatus] = useState<SubscribeStatus>("idle");
+
+  async function handleSubscribe(e: React.FormEvent) {
+    e.preventDefault();
+    setStatus("loading");
+    try {
+      const res = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+      if (!res.ok) throw new Error();
+      setStatus("success");
+      setEmail("");
+    } catch {
+      setStatus("error");
+    }
+  }
 
   const artists = useMemo(
     () => Array.from(new Set(releases.flatMap((r) => splitArtists(r.artist)))).sort(),
@@ -47,10 +68,22 @@ export default function ReleaseIndex() {
           </select>
         </label>
 
-        <form className="release-index-email" onSubmit={(e) => e.preventDefault()}>
+        <form className="release-index-email" onSubmit={handleSubscribe}>
           <label htmlFor="release-index-email-input">Mailing list</label>
-          <input id="release-index-email-input" type="email" placeholder="your@email.com" required />
-          <button type="submit">Submit →</button>
+          <input
+            id="release-index-email-input"
+            type="email"
+            placeholder="your@email.com"
+            required
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            disabled={status === "loading"}
+          />
+          <button type="submit" disabled={status === "loading"}>
+            {status === "loading" ? "Submitting…" : "Submit →"}
+          </button>
+          {status === "success" && <span className="release-index-email-note">Thanks — you're on the list.</span>}
+          {status === "error" && <span className="release-index-email-note">Something went wrong. Try again.</span>}
         </form>
       </div>
 
@@ -69,7 +102,7 @@ export default function ReleaseIndex() {
             <span className="release-index-meta">{r.meta}</span>
 
             <a
-              href="#"
+              href={r.link ?? "https://lekrecords.bandcamp.com/"}
               target="_blank"
               rel="noopener noreferrer"
               className="release-index-buy"

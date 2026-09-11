@@ -8,6 +8,7 @@ export type Release = {
   cover: string;
   vinyl: boolean;
   price: string | null;
+  link: string | null;
 };
 
 export const releases: Release[] = [
@@ -21,6 +22,7 @@ export const releases: Release[] = [
     cover: "cover-one",
     vinyl: false,
     price: null,
+    link: "https://lekrecords.bandcamp.com/album/lek-009",
   },
   {
     code: "LEK 003",
@@ -40,6 +42,7 @@ export const releases: Release[] = [
     cover: "cover-six",
     vinyl: true,
     price: "€15",
+    link: "https://lekrecords.bandcamp.com/album/lek-003",
   },
   {
     code: null,
@@ -51,6 +54,7 @@ export const releases: Release[] = [
     cover: "cover-three",
     vinyl: false,
     price: "Free",
+    link: "https://lekrecords.bandcamp.com/album/aeon-2",
   },
   {
     code: null,
@@ -62,6 +66,7 @@ export const releases: Release[] = [
     cover: "cover-four",
     vinyl: true,
     price: "€15",
+    link: "https://lekrecords.bandcamp.com/album/ole-2",
   },
   {
     code: null,
@@ -89,6 +94,7 @@ export const releases: Release[] = [
     cover: "cover-five",
     vinyl: false,
     price: "€8",
+    link: "https://lekrecords.bandcamp.com/album/smooth-v-a",
   },
   {
     code: null,
@@ -100,6 +106,7 @@ export const releases: Release[] = [
     cover: "cover-one",
     vinyl: false,
     price: "€2",
+    link: "https://lekrecords.bandcamp.com/album/kim-durbeck-remixes-pt-2",
   },
   {
     code: null,
@@ -116,6 +123,7 @@ export const releases: Release[] = [
     cover: "cover-two",
     vinyl: false,
     price: "€5",
+    link: "https://lekrecords.bandcamp.com/album/kim-d-rbeck-remixes",
   },
   {
     code: null,
@@ -132,6 +140,7 @@ export const releases: Release[] = [
     cover: "cover-three",
     vinyl: true,
     price: "€12",
+    link: "https://lekrecords.bandcamp.com/album/lek",
   },
   {
     code: "LEK V/A 1",
@@ -152,6 +161,7 @@ export const releases: Release[] = [
     cover: "cover-four",
     vinyl: false,
     price: "€6",
+    link: "https://lekrecords.bandcamp.com/album/lek-v-a-1",
   },
   {
     code: null,
@@ -163,6 +173,7 @@ export const releases: Release[] = [
     cover: "cover-one",
     vinyl: false,
     price: null,
+    link: "https://lekrecords.bandcamp.com/track/du-dro-med-henne-kim-d-rbeck-rework",
   },
   {
     code: null,
@@ -174,5 +185,6 @@ export const releases: Release[] = [
     cover: "cover-two",
     vinyl: false,
     price: "€7",
+    link: "https://lekrecords.bandcamp.com/album/skhvanaheim",
   },
 ];
