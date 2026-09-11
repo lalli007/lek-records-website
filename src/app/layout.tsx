@@ -38,6 +38,9 @@ export default function RootLayout({
           <Nav />
         </header>
         {children}
+        <footer className="site-footer">
+          <p>© 2026 Lek.rec</p>
+        </footer>
       </body>
     </html>
   );
